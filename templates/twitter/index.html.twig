@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+<style>
+
+    html,body{
+        padding: 0px;
+        margin: 0px;
+        font-family: "Segoe UI",Arial,sans-serif;
+        background-color: #e6ecf0;
+        color: #14171a;
+        font-size: 14px;
+        line-height: 20px;
+        position: relative;
+    }
+
+    li{
+        display: inline;
+    }
+    .header {
+        height: 46px;
+        background-color:white;
+        padding: 0px;
+    }
+    .section{
+
+    }
+
+    .connexion{
+        border: 1px solid rgba(0,0,0,0.1);
+        max-width:835px;
+        margin: auto;
+        margin-top: 10px;
+        background-color: white;
+    }
+
+    .btn-success{
+        border-radius: 100px;
+        box-shadow: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        padding: 6px 16px;
+        position: relative;
+        text-align: center;
+        white-space: nowrap;
+        background-color: #1da1f2;
+        border: 1px solid #1da1f2;
+        color: #fff;
+    }
+
+    .ban{
+        width: auto;
+        padding: 20px 10px;
+    }
+</style>
+
+
+        <div class="header">
+
+            <ul>
+                <li>Logo Twitter</li>
+                <li>Accueil</li>
+                <li>A propos</li>
+                <li>Langue:français</li>
+
+            </ul>
+        </div>
+
+        <div class="section">
+
+            <div class="connexion">
+
+                <h1>Se connecter à Twitter</h1>
+                {{ form_start(formUser) }}
+
+                {{ form_row(formUser.identifiant , {'attr':{'placeholder': 'Téléphone,email ou identifiant' }}) }}
+
+                {{ form_row(formUser.password, {'attr':{'placeholder': 'Mot de passe' }}) }}
+
+                <button type="submit" class="btn-success">Se connecter</button>
+
+                {{ form_end(formUser) }}
+            </div>
+
+            <div class="ban">
+
+
+            </div>
+        </div>
+
+
+
+{% endblock %}
